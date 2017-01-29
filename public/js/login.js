@@ -22,7 +22,7 @@ $(document).on("click", "#register-submit-btn", function () {
     var password = $("#txtRegisterPassword").val();
     var confirmPassword = $("#txtRegisterConfirmPassword").val();
 
-    if (confirmPassword == password) {
+    if (confirmPassword === password) {
         //sign in
         console.log("trying signin with: " + username + " " + password);
         const promise = auth.createUserWithEmailAndPassword(username, password);
