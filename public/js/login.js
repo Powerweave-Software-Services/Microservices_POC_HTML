@@ -36,13 +36,16 @@ $(document).on("click", "#register-submit-btn", function () {
 });
 
 $(function () {
+    //sign out the current user
     auth.signOut();
+
+    //handler registration for auth state changed
     auth.onAuthStateChanged(firebaseUser => {
         console.log("Auth state changed!");
         console.log(firebaseUser);
 
         if (firebaseUser) {
-            window.location = "index.html";
+            window.location = "home.html";
         }
     });
 });
@@ -55,7 +58,6 @@ $(document).on("click", "#btnFacebookLogin", function () {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        // ...
     }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
