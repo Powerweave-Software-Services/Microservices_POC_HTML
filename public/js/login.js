@@ -12,7 +12,8 @@ $(document).on("click", ".btnLogin", function () {
     const promise = auth.signInWithEmailAndPassword(username, password);
 
     //error handling
-    promise.catch(e => console.log(e.message));
+    //promise.catch(e => console.log(e.message));
+    promise.catch(e => alert("Invalid username/password."));
 });
 
 //Create user

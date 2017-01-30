@@ -1,0 +1,80 @@
+﻿<h1 class="page-title">
+    Orders
+    <small>All orders placed within the system</small>
+</h1>
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+        <div class="portlet light ">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-settings font-red"></i>
+                    <span class="caption-subject font-red sbold uppercase">Orders List</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group btn-group-devided" data-toggle="buttons">
+                        <label class="btn btn-transparent red btn-outline btn-circle btn-sm active">
+                            <input type="radio" name="options" class="toggle" id="option1">Actions
+                        </label>
+                        <label class="btn btn-transparent red btn-outline btn-circle btn-sm">
+                            <input type="radio" name="options" class="toggle" id="option2">Settings
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-scrollable">
+                    <table class="table table-hover table-light">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Id </th>
+                                <th> Date </th>
+                                <th> Total </th>
+                                <th> Items </th>
+                                <th> Status </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyMain">
+                            <!--<tr>
+                                <td> 1 </td>
+                                <td> Mark </td>
+                                <td> Otto </td>
+                                <td> makr124 </td>
+                                <td>
+                                    <span class="label label-sm label-success"> Approved </span>
+                                </td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- END SAMPLE TABLE PORTLET-->
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        
+        //Fetching Orders Data
+        //$.ajax({
+        //    method: "GET",
+        //    url: "http://alfredorders.gear.host/orders_api.php"
+        //})
+        //    .done(function (orders) {
+        //        orderInfo = JSON.parse(orders);
+        //        for (var i = 0; i < orderInfo.length; i++) {
+        //            var innhtml = '<tr><td> ' + i + ' </td><td> ' + orderInfo[i].OrderId + ' </td><td> ' + orderInfo[i].OrderDate + ' </td><td> ' + orderInfo[i].OrderTotal + ' </td><td> ' + orderInfo[i].Items.length + ' </td><td><span class="label label-sm label-success"> Approved </span></td></tr >';
+        //            $("#tbodyMain").append(innhtml);
+        //        }
+        //    });
+        //productInfo
+        //orderInfo
+        for (var i = 0; i < orderInfo.length; i++) {
+            var innhtml = '<tr><td> ' + i + ' </td><td> ' + orderInfo[i].OrderId + ' </td><td> ' + orderInfo[i].OrderDate + ' </td><td> ' + orderInfo[i].OrderTotal + ' </td><td> ' + orderInfo[i].Items.length + ' </td><td><span class="label label-sm label-success"> Approved </span></td></tr >';
+            $("#tbodyMain").append(innhtml);
+        }
+    });
+
+    
+</script>
