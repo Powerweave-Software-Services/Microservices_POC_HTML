@@ -14,10 +14,10 @@
                 <div class="actions">
                     <div class="btn-group btn-group-devided" data-toggle="buttons">
                         <label class="btn btn-transparent red btn-outline btn-circle btn-sm active">
-                            <input type="radio" name="options" class="toggle" id="option1">Actions
+                            <input type="radio" name="options" class="toggle" id="option1">Approved
                         </label>
                         <label class="btn btn-transparent red btn-outline btn-circle btn-sm">
-                            <input type="radio" name="options" class="toggle" id="option2">Settings
+                            <input type="radio" name="options" class="toggle" id="option2">UnApproved
                         </label>
                     </div>
                 </div>
@@ -28,10 +28,10 @@
                         <thead>
                             <tr>
                                 <th> # </th>
-                                <th> Id </th>
-                                <th> Date </th>
-                                <th> Total </th>
-                                <th> Items </th>
+                                <th> Category </th>
+                                <th> SKU </th>
+                                <th> Name </th>
+                                <th> Price </th>
                                 <th> Status </th>
                             </tr>
                         </thead>
@@ -55,11 +55,10 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        for (var i = 0; i < orderInfo.length; i++) {
-            var innhtml = '<tr><td> ' + i + ' </td><td> ' + orderInfo[i].OrderId + ' </td><td> ' + orderInfo[i].OrderDate + ' </td><td> ' + orderInfo[i].OrderTotal + ' </td><td> ' + orderInfo[i].Items.length + ' </td><td><span class="label label-sm label-success"> Approved </span></td></tr >';
+        console.log(productInfo);
+        for (var i = 0; i < productInfo.length; i++) {
+            var innhtml = '<tr><td> ' + (i + 1) + ' </td><td> ' + productInfo[i].Category + ' </td><td> ' + productInfo[i].ProductCode + ' </td><td> ' + productInfo[i].ProductName + ' </td><td> INR ' + productInfo[i].Price + ' </td><td><span class="label label-sm label-success"> Approved </span></td></tr >';
             $("#tbodyMain").append(innhtml);
         }
     });
-
-    
 </script>

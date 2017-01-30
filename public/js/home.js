@@ -15,7 +15,7 @@ $(function () {
 });
 
 function LogOut() {
-    alert("signing out");
+    alert("Logging out from firebase authentication. :)");
     //sign out the current user
     auth.signOut();
 }
